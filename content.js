@@ -138,7 +138,7 @@ const FAQ = [
   },
   {
     q: "How do you calculate scores?",
-    a: "Scores will be calculated as the average of the individual scores (out of 10) plus your team round score (out of 13) plus your puzzle round score times a multiplier (out of 12).",
+    a: "Scores will be calculated as the average of the individual scores (out of 10) plus your team round score (out of 13) plus your puzzle round score times a multiplier (out of 12) for a total of 35 points.",
   },
   {
     q: "Will you release a leaderboard for the competition?",
