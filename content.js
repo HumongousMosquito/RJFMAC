@@ -118,7 +118,7 @@ const FAQ = [
   },
   {
     q: "When is the main competition?",
-    a: "The competition is on the week of December 7 on Monday, Tuesday, and Thursday after school at 3 PM for one hour each day. Depending on how many people can make it, we may add a second slot.",
+    a: "The competition is on the week of December 7 on Monday, Tuesday, and Thursday after school at 3 PM for one hour each day in the Y wing. Depending on how many people can make it, we may add a second slot.",
   },
   {
     q: "What if I can't make the competition?",
