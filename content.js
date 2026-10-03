@@ -14,12 +14,12 @@ const LINKS = {
 // ------------------------------------------------------------
 const ANNOUNCEMENTS = [
   {
-    date: "2026-09-30",
+    date: "2026-10-02",
     title: "Welcome to the competition!",
     body: "Registration is now open. Head to the Register tab to sign up with your school email.",
   },
   {
-    date: "2026-09-30",
+    date: "2026-10-02",
     title: "Problems of the week are live!",
     body: "A few problems are posted. Give them a try!",
   },
