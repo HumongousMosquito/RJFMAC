@@ -4,95 +4,110 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RJFMAC: the Fisher MAth Competition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <h1>RJFMAC: the Fisher MAth Competition</h1>
-      <p class="tagline">Problems, announcements, and more</p>
+  <header class="masthead">
+    <div class="wrap masthead-top">
+      <div>
+        <h1>RJFMAC</h1>
+        <p class="subtitle">The Fisher MAth Competition</p>
+      </div>
+      <p class="contest-date">Contest week of December 7</p>
     </div>
-    <nav class="tabs wrap" role="tablist">
-      <button class="tab" role="tab" data-tab="announcements">Announcements</button>
-      <button class="tab" role="tab" data-tab="rules">Rules</button>
-      <button class="tab" role="tab" data-tab="register">Register</button>
-      <button class="tab" role="tab" data-tab="potw">Problems of the Week</button>
-      <button class="tab" role="tab" data-tab="leaderboard">Leaderboard</button>
-      <button class="tab" role="tab" data-tab="resources">Resources</button>
-      <button class="tab" role="tab" data-tab="faq">FAQ</button>
-      <button class="tab" role="tab" data-tab="questions">Questions</button>
+    <nav class="tabs" role="tablist">
+      <div class="wrap tabs-inner">
+        <button class="tab" role="tab" data-tab="announcements">Announcements</button>
+        <button class="tab" role="tab" data-tab="rules">Rules</button>
+        <button class="tab" role="tab" data-tab="register">Register</button>
+        <button class="tab" role="tab" data-tab="potw">Problems of the Week</button>
+        <button class="tab" role="tab" data-tab="leaderboard">Leaderboard</button>
+        <button class="tab" role="tab" data-tab="resources">Resources</button>
+        <button class="tab" role="tab" data-tab="faq">FAQ</button>
+        <button class="tab" role="tab" data-tab="questions">Questions</button>
+      </div>
     </nav>
   </header>
 
   <main class="wrap">
-    <section id="announcements" class="panel" role="tabpanel">
+    <section class="panel" data-panel="announcements" role="tabpanel">
       <h2>Announcements</h2>
       <div id="announcement-list"></div>
     </section>
 
-    <section id="rules" class="panel" role="tabpanel">
+    <section class="panel" data-panel="rules" role="tabpanel">
       <h2>Rules</h2>
-      <ol id="rule-list" class="card rules"></ol>
+      <ol id="rule-list" class="rules"></ol>
     </section>
 
-    <section id="potw" class="panel" role="tabpanel">
+    <section class="panel" data-panel="potw" role="tabpanel">
       <div class="panel-head">
         <h2>Problems of the Week</h2>
-        <a id="potw-link" class="button button-large" target="_blank" rel="noopener">Submit an answer</a>
+        <a id="potw-link" class="button" target="_blank" rel="noopener">Submit an answer</a>
       </div>
-      <p class="hint">Answers are positive integers. Sign in with your school account to submit. Submissions never close, so you can try any past problem at any time. However, you get double points for a problem submitted on the week it was posted. Note: points DO NOT indicate difficulty.</p>
+      <ul class="facts">
+        <li>Every answer is a positive integer.</li>
+        <li>Sign in with your school account to submit.</li>
+        <li>Submissions never close, but a problem is worth double during the week it's posted.</li>
+        <li>Points don't indicate difficulty.</li>
+      </ul>
       <div id="problem-list"></div>
     </section>
 
-    <section id="leaderboard" class="panel" role="tabpanel">
-      <h2>Leaderboard</h2>
-      <p class="hint" id="leaderboard-updated"></p>
+    <section class="panel" data-panel="leaderboard" role="tabpanel">
+      <div class="panel-head">
+        <h2>Leaderboard</h2>
+        <p class="meta" id="leaderboard-updated"></p>
+      </div>
       <div id="leaderboard-table"></div>
     </section>
 
-    <section id="resources" class="panel" role="tabpanel">
+    <section class="panel" data-panel="resources" role="tabpanel">
       <h2>Resources</h2>
-      <p class="hint">Helpful places to practice and learn more.</p>
       <div id="resource-list"></div>
     </section>
 
-    <section id="register" class="panel" role="tabpanel">
+    <section class="panel" data-panel="register" role="tabpanel">
       <h2>Register</h2>
-      <p class="hint">Sign up with your school email. We'll send competition updates to that address.</p>
+      <p class="lede">Sign up with your school email. Competition updates go to that address.</p>
 
-      <div class="card step">
-        <span class="badge">Step 1 · Everyone</span>
-        <h3>Participant registration</h3>
-        <p><strong>Every participant must fill out this form</strong>, including team captains and MATHCOUNTS students.</p>
-        <a id="register-link" class="button" target="_blank" rel="noopener">Register yourself</a>
-      </div>
-
-      <div class="card step">
-        <span class="badge badge-points">Step 2 · Team captains &amp; solo competitors</span>
-        <h3>Team registration</h3>
-        <p><strong>Only team captains fill out this form</strong>, once per team, after completing Step 1. Other team members don't need to do anything here.</p>
-        <p class="note"><strong>MATHCOUNTS students:</strong> Teams cannot include anyone who is in MATHCOUNTS, because MATHCOUNTS students take the contest separately. MATHCOUNTS students should only do the individual form.</p>
-        <p class="note"><strong>Competing on your own?</strong> You still need to fill out this form. You count as a team of one, so you are your own captain.</p>
-        <a id="team-register-link" class="button button-green" target="_blank" rel="noopener">Register your team</a>
-      </div>
+      <ol class="steps">
+        <li class="step">
+          <p class="meta">Everyone</p>
+          <h3>Register yourself</h3>
+          <p>Every participant fills out this form, including team captains and MATHCOUNTS students.</p>
+          <a id="register-link" class="button" target="_blank" rel="noopener">Participant form</a>
+        </li>
+        <li class="step">
+          <p class="meta">Team captains and solo competitors</p>
+          <h3>Register your team</h3>
+          <p>One form per team, filled out by the captain after step 1. Other team members skip this.</p>
+          <p class="note"><strong>MATHCOUNTS students</strong> take the contest separately, so they can't join a team. Fill out the step 1 form only.</p>
+          <p class="note"><strong>Competing alone?</strong> You're a team of one and your own captain, so fill this out too.</p>
+          <a id="team-register-link" class="button" target="_blank" rel="noopener">Team form</a>
+        </li>
+      </ol>
     </section>
 
-    <section id="faq" class="panel" role="tabpanel">
-      <h2>Frequently Asked Questions</h2>
+    <section class="panel" data-panel="faq" role="tabpanel">
+      <h2>FAQ</h2>
       <div id="faq-list"></div>
-      <p class="hint">Don't see your question? <a href="#questions">Ask us on the Questions tab.</a></p>
+      <p class="meta faq-more">Still stuck? <a href="#questions">Send us a question.</a></p>
     </section>
 
-    <section id="questions" class="panel" role="tabpanel">
+    <section class="panel" data-panel="questions" role="tabpanel">
       <h2>Questions</h2>
-      <p>Ask about rules, problems, or anything else. We'll reply to your school email.</p>
-      <a id="questions-link" class="button button-green" target="_blank" rel="noopener">Ask a question</a>
+      <p class="lede">Ask about the rules, a problem, or anything else. We'll reply to your school email.</p>
+      <a id="questions-link" class="button" target="_blank" rel="noopener">Ask a question</a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">RJFMAC: the Fisher MAth Competition</div>
+    <div class="wrap">RJFMAC · the Fisher MAth Competition</div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>

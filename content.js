@@ -1,9 +1,7 @@
-// ============================================================
-//  SITE CONTENT — this is the only file you need to edit
-//  to post announcements and problems of the week.
-// ============================================================
+// Site content. Edit this file to post announcements, problems,
+// resources, rules, and FAQ entries.
 
-// Links to your Google Forms (replace the placeholders).
+// Google Form links.
 const LINKS = {
   register: "https://docs.google.com/forms/d/e/1FAIpQLScGvhIdJi5wGMFA3qYJ3WE8YM7huUvXdA7_QAH3Zi3JN8eq7A/viewform?usp=publish-editor",
   teamRegister: "https://docs.google.com/forms/d/e/1FAIpQLScnrR8ppYfNPwCto6GltPII2i-OYr0QnX0yeTzErpc8DSrUmg/viewform?usp=publish-editor",
@@ -12,8 +10,7 @@ const LINKS = {
 };
 
 // ------------------------------------------------------------
-//  ANNOUNCEMENTS — shown newest first automatically (sorted by date).
-//  Copy a block { ... }, paste it at the top, and change the text.
+//  ANNOUNCEMENTS: sorted newest first by date.
 // ------------------------------------------------------------
 const ANNOUNCEMENTS = [
   {
@@ -31,8 +28,7 @@ const ANNOUNCEMENTS = [
 // ------------------------------------------------------------
 //  PROBLEMS OF THE WEEK
 //
-//  To add a new problem: copy one block { ... }, paste it at the
-//  top of the list, and change the fields.
+//  Problems are grouped by week on the page.
 //
 //  Math: write LaTeX between $...$ (inline) or $$...$$ (display).
 //  Keep the String.raw`...` wrapper around the statement so
@@ -63,9 +59,7 @@ const PROBLEMS = [
 ];
 
 // ------------------------------------------------------------
-//  RESOURCES — links to help people get better.
-//  Shown in the order listed here. Copy a block { ... } to add one.
-//  "description" is optional.
+//  RESOURCES: shown in this order. "description" is optional.
 // ------------------------------------------------------------
 const RESOURCES = [
   {
@@ -91,12 +85,10 @@ const RESOURCES = [
 ];
 
 // ------------------------------------------------------------
-//  RULES — shown as a numbered list, in this order.
-//  These are starting suggestions; edit, add, or delete freely.
-//  Each rule goes in quotes and ends with a comma.
+//  RULES: shown as a numbered list, in this order.
 // ------------------------------------------------------------
 const RULES = [
-  "The competition is open to all registered students. Register using your school email. you can form team with up to 5 students.",
+  "The competition is open to all registered students. Register using your school email. Teams can have up to 5 students.",
   "Each contestant must register, and a captain must register each team. Solo competitors must do both forms.",
   "A new Problem of the Week is posted each week. Every answer is a positive integer. PLEASE REGISTER before submitting problems.",
   "Submissions never close, so you can solve past problems at any time.",
@@ -107,9 +99,7 @@ const RULES = [
 ];
 
 // ------------------------------------------------------------
-//  FAQ — frequently asked questions, shown in this order.
-//  Each entry has a question "q" and an answer "a".
-//  These are starting suggestions; edit, add, or delete freely.
+//  FAQ: shown in this order. "q" is the question, "a" the answer.
 // ------------------------------------------------------------
 const FAQ = [
   {
@@ -146,7 +136,7 @@ const FAQ = [
   },
   {
     q: "Do I have to solve every Problem of the Week?",
-    a: "No. Problems of the Week are optional practice. Try problems if you want to.",
+    a: "No. Problems of the Week are optional practice.",
   },
   {
     q: "Can I submit an answer to an old problem?",
