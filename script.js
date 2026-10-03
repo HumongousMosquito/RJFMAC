@@ -62,7 +62,10 @@ function renderProblems() {
             <h4>${p.title}</h4>
             ${p.points != null ? `<span class="points">${p.points} ${p.points === 1 ? "pt" : "pts"}</span>` : ""}
           </div>
-          <div class="statement">${p.statement}</div>
+          <div class="statement">
+            ${p.statement}
+            ${p.image ? `<img class="diagram" src="${p.image}" alt="${escapeHtml(p.imageAlt || "Diagram for " + p.title)}" loading="lazy">` : ""}
+          </div>
         </article>`).join("")}
     </section>`;
   }).join("");

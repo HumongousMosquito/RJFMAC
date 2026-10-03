@@ -35,6 +35,11 @@ const ANNOUNCEMENTS = [
 //  backslashes like \frac and \sqrt work without extra escaping.
 //
 //  weekOf: the first day of that problem's week (YYYY-MM-DD).
+//
+//  Diagrams (optional): put the picture in the images/ folder and add
+//    image: "images/your-file.png",
+//    imageAlt: "Short description of the picture",
+//  The picture shows below the statement.
 // ------------------------------------------------------------
 const PROBLEMS = [
   {
